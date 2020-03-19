@@ -1,0 +1,22 @@
+note over browser:
+new note has been entered
+save button is clicked
+custom onSubmit function is executed
+end note
+
+note over browser:
+new note created and added to list of notes 
+redrawNotes() called
+new note is displayed on screen
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over server:
+server receives new note in the request
+content-type: application/json
+{content: "", date: ""} 
+new note is added to list of notes on server
+end note
+
+server-->browser: status code 201 {"message":"note created"}
